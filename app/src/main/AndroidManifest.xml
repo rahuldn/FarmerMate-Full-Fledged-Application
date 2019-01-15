@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.rahul.farmermatever20"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="FarmerMate"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name=".events.MyDriveEventService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.drive.events.HANDLE_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="Sasuke Uchiha">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".QueryFilesActivity" />
+        <activity android:name=".RetrieveContentsActivity" />
+        <activity android:name=".RetrieveContentsWithProgressDialogActivity" />
+        <activity android:name=".CreateFileActivity" />
+        <activity android:name=".CreateEmptyFileActivity" />
+        <activity android:name=".CreateFileInAppFolderActivity" />
+        <activity android:name=".CreateFolderActivity" />
+        <activity android:name=".DeleteFileActivity" />
+        <activity android:name=".AppendContentsActivity" />
+        <activity android:name=".RewriteContentsActivity" />
+        <activity android:name=".EditMetadataActivity" />
+        <activity android:name=".CreateFileWithCreatorActivity" />
+        <activity android:name=".RetrieveMetadataActivity" />
+        <activity android:name=".CreateFileInFolderActivity" />
+        <activity android:name=".CreateFolderInFolderActivity" />
+        <activity android:name=".QueryFilesInFolderActivity" />
+        <activity android:name=".PinFileActivity" />
+        <activity android:name=".events.ListenChangeEventsForFilesActivity" />
+        <activity android:name=".events.SubscribeChangeEventsForFilesActivity" />
+        <activity android:name=".QueryNonTextFilesActivity" />
+        <activity android:name=".QueryFilesSharedWithMeActivity" />
+        <activity android:name=".QueryFilesWithTitleActivity" />
+        <activity android:name=".QueryStarredTextFilesActivity" />
+        <activity android:name=".QueryTextOrHtmlFilesActivity" />
+        <activity android:name=".InsertUpdateCustomPropertyActivity" />
+        <activity android:name=".QueryFilesWithCustomPropertyActivity" />
+        <activity android:name=".DeleteCustomPropertyActivity" />
+        <activity android:name=".QuerySortedFilesActivity" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

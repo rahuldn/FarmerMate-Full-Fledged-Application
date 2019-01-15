@@ -1,0 +1,5 @@
+<root>
+    <item name='com.google.android.gms.drive.DriveId'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>
